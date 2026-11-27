@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>臭臭和瑰色宝宝的恋爱日常</title>
-  <meta name="theme-color" content="#f4f1f2" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>圣诞限定 · 瑰色宝宝 Shibuya Love</title>
+  <meta name="theme-color" content="#24121e" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
   <style>
@@ -1261,10 +1261,44 @@
         border-radius: 30px;
       }
     }
-    </style>
+    
+/* Shibuya Love — gyaru Christmas edition */
+:root{--bg-base:#24121e;--text-main:#301322;--text-sec:#85405e;--accent-pink:#d90069;--accent-soft:#ffcee5;--accent-warm:#f29abe}
+body{background-color:#27141e;background-image:radial-gradient(ellipse at 25% 25%,#27141e 0 15%,#ad765c 17% 24%,transparent 27%),radial-gradient(ellipse at 72% 76%,#25151e 0 13%,#d3948c 15% 23%,transparent 26%),linear-gradient(135deg,#9d426b,#e7a1b4);background-size:52px 43px,62px 48px,100% 100%;background-attachment:fixed;color:#301322}
+body::before,body::after{display:none}
+.page-shell{width:min(1160px,calc(100% - 36px))}
+.gy-nav{position:relative;z-index:5;background:#21111b;color:#fff0f8;border-bottom:3px double #ff6bad;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px max(18px,calc((100vw - 1160px)/2));font-weight:800;font-size:12px;letter-spacing:1.4px;flex-wrap:wrap}
+.gy-nav a{color:#ffafd5;text-decoration:none;margin-left:14px}.gy-nav a:hover{color:white}
+.hero{min-height:0;padding:30px 0 28px}
+.hero-card{width:100%;min-height:460px;border-radius:6px;border:5px double #ffe1f1;background:linear-gradient(105deg,#210f1c 0%,#45162f 57%,#a40e57 100%);box-shadow:0 0 0 3px #ba1a68,0 14px 32px #150b16aa;backdrop-filter:none;text-align:center;padding:55px 30px 48px;isolation:isolate}
+.hero-card::before{background-image:radial-gradient(circle,#fff 0 1px,transparent 2px),radial-gradient(circle,#ff91c8 0 2px,transparent 3px);background-size:39px 53px,81px 67px;opacity:.55;z-index:-1}
+.hero-card::after{content:"✦";color:white;font-size:120px;line-height:1;width:auto;height:auto;right:7%;top:12%;filter:none;background:none;text-shadow:0 0 22px #ff5ba6;opacity:.7;z-index:-1}
+.gy-kicker{display:inline-block;background:#ffb4d9;color:#321220;padding:7px 18px;transform:rotate(-4deg);font-size:11px;font-weight:900;letter-spacing:3px;border:2px solid white}
+.hero h1{font-family:Georgia,"Noto Sans SC",serif;font-style:italic;font-weight:900;font-size:clamp(60px,10vw,128px);line-height:.93;letter-spacing:-.065em;margin:24px 0 18px;color:#ff459e;text-shadow:2px 2px #fff,-2px -2px #fff,5px 6px #b20a60,8px 9px #120812;position:relative;z-index:2}
+.hero-subtitle{color:#fff0f8;font-size:clamp(18px,3vw,28px);letter-spacing:2px;font-weight:900}.sub-love,.hero-scroll{color:#ffd7e9}
+.hero .kitty-icon{width:64px;max-height:75px;object-fit:contain;margin-top:16px}.sanrio-sticker{filter:drop-shadow(0 0 7px #ffb5d8)}
+.gy-bow{position:absolute;right:4%;bottom:10%;font-size:clamp(38px,8vw,94px);transform:rotate(14deg);filter:drop-shadow(0 4px 2px #0008);z-index:2}
+.gy-photo{position:absolute;left:4%;top:12%;width:clamp(85px,17vw,220px);transform:rotate(-12deg);padding:7px 7px 22px;background:#fff4fb;box-shadow:0 5px 15px #0008;border:2px solid #ff72b2;z-index:-1}.gy-photo img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover}
+.bento-container{gap:18px;padding-bottom:26px}
+.bento-card,.letter-box{border:3px double #b51964;border-radius:9px;background-color:#fff0f7;background-image:linear-gradient(#f0a7c526 1px,transparent 1px),linear-gradient(90deg,#f0a7c526 1px,transparent 1px);background-size:22px 22px;box-shadow:4px 5px 0 #24101f,0 0 0 2px #ffe0f0;backdrop-filter:none;color:#351526}
+.bento-card .card-desc,.letter-content{color:#51243a}.card-title,.letter-head h2{color:#b60057;font-family:Georgia,"Noto Sans SC",serif;font-weight:900}.card-tag{background:#321322;color:#ffc2de;border:1px solid #ed89b7;border-radius:3px}
+.timer-card{grid-column:span 6;min-height:300px;padding:32px 24px;border-radius:8px}.timer-memory-bg{opacity:.16}.timer-val,.timer-number{color:#da0068!important;font-family:Georgia,serif;font-style:italic;text-shadow:1px 1px white,3px 3px #e5a4c3}.timer-sub{color:#9b174e}
+.gy-count{grid-column:span 6;min-height:300px;padding:30px 22px;background:linear-gradient(140deg,#22111d,#521a38);color:#fff1f8;border-color:#ff9acc}.gy-count .card-title,.gy-count .card-desc{color:#fff0fa}
+.gy-digits{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin:18px 0}.gy-digits div{background:#ffffff12;border:1px solid #ff91c7;border-radius:4px;text-align:center;padding:12px 2px}.gy-digits strong{display:block;font:900 clamp(22px,4vw,43px)/1 Georgia,serif;color:#ffacd5}.gy-digits small{font-size:10px;color:#ffe3f2}
+.hidden-guise-card,.gy-gift{grid-column:span 6;min-height:240px;padding:26px}.hidden-trigger,.gy-gift button{border:2px solid #ffd8ed!important;border-radius:22px;background:linear-gradient(#ff6cb5,#bd0054)!important;color:#fff!important;box-shadow:0 3px 0 #79163e;padding:13px 20px;font-weight:900;cursor:pointer}.gy-gift button{margin:12px 0}.gy-gift p{line-height:1.8}.gy-gift-message[hidden]{display:none}.gy-gift-message{background:#ffdbed;border:1px dashed #b71e65;padding:14px;margin-top:8px}
+.timeline-card{padding:clamp(18px,4vw,48px)}.timeline-card .card-title{font-size:clamp(30px,5vw,50px);font-style:italic}.timeline-dot{background:#d80069;color:white;border:2px solid #fff;box-shadow:0 0 0 2px #c92573}.timeline-photo-front,.timeline-photo-back{border-radius:3px!important;border:2px solid #ec9fc5!important;background:#fff9fb;padding:8px 8px 22px;box-shadow:4px 5px 0 #9e326044}.timeline-photo img{border-radius:2px}.photo-note{color:#a0004c}.photo-flip-hint{background:#ffcee5;color:#8f174f}
+.letter-sec{padding-top:35px}.letter-head h2{color:#fff0f8;text-shadow:2px 2px #9d0051}.letter-box{border-left:12px dotted #b92b6b}.highlight{color:#d00068}.signature{color:#b00056}
+.fixed-music-player{background:linear-gradient(150deg,#ffe2ef,#ed7cb3);border:4px double #a71861;border-radius:12px;box-shadow:4px 5px #321220;backdrop-filter:none}.music-cover{border:2px solid #b8246c}.music-toggle{background:#2e1525!important;color:#fff!important}.music-title,.music-lyric{color:#591b3c!important}.love-progress-bar{background:linear-gradient(90deg,#ff48a3,#fff,#ff48a3)}
+.gy-snow{position:fixed;top:-25px;z-index:8;pointer-events:none;color:#fff;text-shadow:0 0 8px #ff4aaa;animation:gy-fall linear forwards}@keyframes gy-fall{to{transform:translate(45px,110vh) rotate(180deg);opacity:0}}
+.gy-footer{color:#ffe3f1;text-align:center;background:#25121e;padding:20px;margin-top:15px;border-top:2px solid #fa68ac}
+@media(max-width:720px){.gy-nav{padding:12px}.gy-nav a{margin-left:6px;font-size:10px}.hero-card{min-height:360px;padding:38px 15px}.gy-photo{opacity:.55;left:1%;top:13%}.hero h1{font-size:clamp(55px,13vw,90px)}.timer-card,.gy-count,.hidden-guise-card,.gy-gift{grid-column:1/-1;min-height:0;padding:24px 18px}.gy-bow{right:3%;bottom:6%}.hero .kitty-icon{width:48px}.bento-container{gap:15px}.fixed-music-player{left:10px;right:10px;bottom:10px;width:auto}.letter-sec{padding-bottom:85px}}
+@media(prefers-reduced-motion:reduce){.gy-snow{display:none}.reveal{opacity:1!important;transform:none!important}}
+
+</style>
 </head>
 
 <body>
+<nav class="gy-nav"><span>♡ SHIBUYA LOVE CLUB / 2026</span><span><a href="#story">OUR STORY</a><a href="#gift">GIFT</a><a href="#letter">LETTER</a><a href="520.html">520 原版</a></span></nav>
   <div class="cursor-glow" id="cursorGlow"></div>
 
   <div class="love-progress-wrap">
@@ -1279,7 +1313,7 @@
 
   <main class="page-shell">
     <section class="hero">
-      <div class="hero-card">
+      <div class="hero-card"><div class="gy-photo"><img src="h-6-1.jpg" alt="我们的回忆"></div><div class="gy-bow" aria-hidden="true">🎀</div><div class="gy-kicker">XMAS SPECIAL EDITION · ギャル ♡</div>
         <div class="sanrio-sticker sticker-kitty">
           <img src="0-0.png" alt="Hello Kitty" loading="lazy">
         </div>
@@ -1288,8 +1322,8 @@
           <img src="0-1.jpg" alt="My Melody" loading="lazy">
         </div>
         <img class="kitty-icon reveal" src="0-2.png" alt="凯蒂猫" onerror="this.src='https://api.iconify.design/twemoji/cat-face.svg'" />
-        <h1 class="reveal" style="transition-delay: 0.2s;">To 瑰色宝宝</h1>
-        <p class="hero-subtitle reveal" style="transition-delay: 0.4s;">我们的恋爱日常</p>
+        <h1 class="reveal" style="transition-delay: 0.2s;">Shibuya<br>Love ♡</h1>
+        <p class="hero-subtitle reveal" style="transition-delay: 0.4s;">圣诞限定 · 瑰色宝宝</p>
         <div class="sub-love reveal" style="transition-delay: 0.6s;">
           你一直是我每一天的主题。<br>想和宝宝一起把普通的日子，慢慢过成好多好多值得收藏的回忆。
         </div>
@@ -1298,7 +1332,7 @@
     </section>
 
     <section class="bento-container">
-      <audio id="myAudio" src="m.mp3" loop preload="auto"></audio>
+      <audio id="myAudio" src="m.mp3" loop preload="metadata"></audio>
 
       <div class="fixed-music-player" id="fixedMusicPlayer">
         <div class="music-cover">
@@ -1327,6 +1361,7 @@
         </div>
       </div>
 
+      <div class="bento-card reveal gy-count"><div class="card-tag">XMAS COUNTDOWN</div><div class="card-title">离圣诞节还有 ❄</div><div class="gy-digits" id="gyDigits"><div><strong>--</strong><small>DAYS</small></div><div><strong>--</strong><small>HOURS</small></div><div><strong>--</strong><small>MINS</small></div><div><strong>--</strong><small>SECS</small></div></div><div class="card-desc">这个冬天也要和宝宝一起闪闪发光 ♡</div></div>
       <div class="bento-card reveal card-interactive hidden-guise-card" style="transition-delay: 0.35s;">
         <div class="card-content">
           <div style="display:flex; flex-direction:column; gap:8px; max-width:560px;">
@@ -1344,9 +1379,10 @@
         </div>
       </div>
 
+      <div class="bento-card reveal gy-gift" id="gift"><div class="card-tag">A LITTLE XMAS GIFT</div><div class="card-title">给宝宝的圣诞礼物</div><p>拆开臭臭的小心意 ♡</p><button type="button" id="gyGift">🎁 拆开礼物</button><div class="gy-gift-message" id="gyGiftMessage" hidden>圣诞快乐，瑰色宝宝。今年、明年，还有以后的每一个冬天，都想和宝宝一起过。♡</div></div>
     </section>
 
-    <div class="bento-card reveal card-interactive timeline-card" style="transition-delay: 0.4s;">
+    <div id="story" class="bento-card reveal card-interactive timeline-card" style="transition-delay: 0.4s;">
       <div class="card-content">
         <div>
           <div class="card-title">我们的日常与六年</div>
@@ -1462,7 +1498,7 @@
       </div>
     </div>
 
-    <section class="letter-sec reveal">
+    <section id="letter" class="letter-sec reveal">
       <div class="letter-head">
         <h2>Letter For Kunsel</h2>
 
@@ -1499,6 +1535,7 @@
       <div class="archive-note" style="margin-top:24px;font-size:13px;color:#8c7d84;">想看看最初的礼物？<a href="520.html" style="color:#b9879b;">回到 520 原版</a></div>
     </section>
   </main>
+  <footer class="gy-footer">MADE WITH LOVE ♡ 2026 · SHIBUYA LOVE CLUB</footer>
 
   <script>
     document.querySelectorAll('.card-interactive').forEach(card => {
@@ -1602,7 +1639,7 @@
     audio.addEventListener('timeupdate', updateLyrics);
     window.addEventListener('load', autoPlayMusic);
 
-    const startDate = new Date('2026-01-20T00:00:00').getTime();
+    const startDate = new Date('2026-01-20T00:00:00+08:00').getTime();
 
     function updateTimer() {
       const now = Date.now();
@@ -1822,6 +1859,12 @@
         showMemoryWhisper();
       }
     }, { passive: true });
+
+    function gyCountdown(){const n=new Date();let target=new Date(n.getFullYear(),11,25);if(n>=new Date(n.getFullYear(),11,26))target=new Date(n.getFullYear()+1,11,25);const t=Math.max(0,target-n);[Math.floor(t/86400000),Math.floor(t/3600000)%24,Math.floor(t/60000)%60,Math.floor(t/1000)%60].forEach((v,i)=>document.querySelectorAll('#gyDigits strong')[i].textContent=String(v).padStart(2,'0'))}
+    gyCountdown();setInterval(gyCountdown,1000);
+    function gySnow(){if(document.hidden||matchMedia('(prefers-reduced-motion: reduce)').matches)return;const e=document.createElement('span');e.className='gy-snow';e.textContent=['✧','❄','♡'][Math.floor(Math.random()*3)];e.style.left=Math.random()*98+'vw';e.style.fontSize=10+Math.random()*14+'px';e.style.animationDuration=5+Math.random()*5+'s';document.body.append(e);e.addEventListener('animationend',()=>e.remove(),{once:true});setTimeout(()=>e.remove(),11000)}
+    setInterval(gySnow,650);
+    document.getElementById('gyGift').addEventListener('click',()=>{document.getElementById('gyGiftMessage').hidden=false;document.getElementById('gyGift').textContent='💝 已拆开';for(let i=0;i<12;i++)setTimeout(gySnow,i*60)});
   </script>
 </body>
 </html>
