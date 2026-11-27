@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>给瑰色宝宝的520礼物</title>
+  <title>臭臭和瑰色宝宝的恋爱日常 · 圣诞季</title>
+  <meta name="theme-color" content="#173d34" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
   <style>
@@ -1260,10 +1261,255 @@
         border-radius: 30px;
       }
     }
+    /* Christmas season skin — the memories stay, only the season changes. */
+    :root {
+      --bg-base: #f7f2ea;
+      --text-main: #213b35;
+      --text-sec: #7d6f68;
+      --accent-pink: #a32f3f;
+      --accent-soft: #f4e5df;
+      --accent-warm: #d9b56d;
+      --christmas-green: #173d34;
+      --christmas-red: #a32f3f;
+      --christmas-gold: #d9b56d;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 12% 8%, rgba(217,181,109,.18), transparent 26%),
+        radial-gradient(circle at 88% 20%, rgba(163,47,63,.13), transparent 25%),
+        linear-gradient(180deg, #102f2a 0, #173d34 36rem, #f3eee6 56rem, #f7f2ea 100%);
+    }
+
+    body::before {
+      background:
+        radial-gradient(circle at 20% 10%, rgba(255,255,255,.16), transparent 18%),
+        radial-gradient(circle at 80% 16%, rgba(217,181,109,.12), transparent 24%),
+        linear-gradient(180deg, transparent 0 44rem, rgba(255,255,255,.62) 60rem, transparent 80rem);
+    }
+
+    .season-nav {
+      position: fixed;
+      z-index: 1004;
+      top: max(16px, env(safe-area-inset-top));
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(680px, calc(100% - 28px));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 10px 12px 10px 18px;
+      border: 1px solid rgba(255,255,255,.26);
+      border-radius: 999px;
+      color: rgba(255,255,255,.88);
+      background: rgba(11,42,36,.58);
+      box-shadow: 0 18px 50px rgba(5,25,21,.18);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      font-size: 14px;
+    }
+
+    .season-brand { display: flex; align-items: center; gap: 9px; font-weight: 700; letter-spacing: .4px; }
+    .season-brand::before { content: "✦"; color: var(--christmas-gold); }
+    .archive-link {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      transition: background .25s ease, transform .25s ease;
+    }
+    .archive-link:hover { background: rgba(255,255,255,.2); transform: translateY(-1px); }
+
+    .hero { min-height: 94vh; padding-top: 96px; }
+    .hero-card {
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.22);
+      background:
+        radial-gradient(circle at 78% 20%, rgba(217,181,109,.17), transparent 28%),
+        linear-gradient(145deg, rgba(255,255,255,.14), rgba(255,255,255,.05));
+      box-shadow: 0 42px 130px rgba(3,24,20,.3), inset 0 1px 0 rgba(255,255,255,.22);
+    }
+    .hero-card::before {
+      background:
+        linear-gradient(90deg, transparent 0 7%, rgba(217,181,109,.24) 7.2% 7.5%, transparent 7.7% 92%, rgba(217,181,109,.24) 92.2% 92.5%, transparent 92.7%),
+        radial-gradient(circle at top right, rgba(163,47,63,.22), transparent 34%);
+    }
+    .hero-card::after { background: radial-gradient(circle, rgba(217,181,109,.2), transparent 70%); }
+    .hero h1 { color: #fffaf1; text-shadow: 0 12px 40px rgba(0,0,0,.18); }
+    .hero-subtitle { color: #efd8a7; }
+    .sub-love { color: rgba(255,255,255,.78); }
+    .hero-scroll { color: rgba(255,255,255,.68); }
+    .hero-scroll span { background: rgba(255,255,255,.12); box-shadow: none; }
+
+    .christmas-kicker {
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+      padding: 9px 14px;
+      border: 1px solid rgba(239,216,167,.3);
+      border-radius: 999px;
+      color: #efd8a7;
+      background: rgba(255,255,255,.07);
+      font-size: 13px;
+      letter-spacing: 1.4px;
+    }
+
+    .garland {
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 7%;
+      right: 7%;
+      height: 52px;
+      border-top: 2px solid rgba(217,181,109,.45);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .garland::after {
+      content: "●  ●  ●  ●  ●  ●  ●  ●";
+      position: absolute;
+      top: -10px;
+      left: 0;
+      right: 0;
+      color: #f4d58d;
+      font-size: 14px;
+      letter-spacing: clamp(10px, 4vw, 38px);
+      text-shadow: 0 0 12px #f6d27c, 0 0 24px rgba(246,210,124,.75);
+      animation: twinkle 2.4s ease-in-out infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    @keyframes twinkle { to { opacity: .56; filter: brightness(.82); } }
+
+    .bento-container { margin-top: 10px; }
+    .bento-card, .letter-box {
+      border-color: rgba(255,255,255,.82);
+      background: rgba(255,255,255,.62);
+      box-shadow: 0 28px 80px rgba(52,39,31,.08), inset 0 1px 0 rgba(255,255,255,.8);
+    }
+    .card-tag { color: var(--christmas-red); }
+    .timer-card { border-top: 4px solid var(--christmas-green); }
+    .hidden-guise-card { border-top: 4px solid var(--christmas-red); }
+
+    .christmas-countdown-card {
+      grid-column: 1 / -1;
+      min-height: 360px;
+      color: #fff;
+      background:
+        radial-gradient(circle at 88% 18%, rgba(217,181,109,.28), transparent 25%),
+        linear-gradient(135deg, #173d34, #0f2c27);
+      border-color: rgba(255,255,255,.15);
+      justify-content: center;
+    }
+    .christmas-countdown-card::after {
+      content: "🎄";
+      position: absolute;
+      right: clamp(24px, 7vw, 90px);
+      bottom: 30px;
+      font-size: clamp(92px, 18vw, 180px);
+      filter: drop-shadow(0 20px 36px rgba(0,0,0,.18));
+      opacity: .92;
+    }
+    .christmas-countdown-card .card-tag { color: #f2d99f; background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.14); }
+    .christmas-countdown-card .card-title { color: #fffaf1; font-size: clamp(34px, 5vw, 58px); }
+    .christmas-countdown-card .card-desc { color: rgba(255,255,255,.68); font-size: 16px; }
+    .christmas-countdown {
+      position: relative;
+      z-index: 1;
+      margin-top: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      max-width: 620px;
+    }
+    .countdown-unit {
+      min-width: 112px;
+      padding: 18px 22px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.09);
+      border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(12px);
+    }
+    .countdown-unit strong { display: block; color: #fff; font-size: 32px; font-variant-numeric: tabular-nums; }
+    .countdown-unit span { color: rgba(255,255,255,.58); font-size: 13px; }
+
+    .gift-card { grid-column: 1 / -1; min-height: 360px; align-items: center; text-align: center; justify-content: center; }
+    .gift-button {
+      width: 108px;
+      height: 108px;
+      border: 0;
+      border-radius: 30px;
+      color: white;
+      background: linear-gradient(145deg, #b53a4b, #8f2534);
+      box-shadow: 0 22px 48px rgba(163,47,63,.26);
+      font-size: 50px;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .gift-button:hover { transform: translateY(-6px) rotate(-3deg); box-shadow: 0 28px 58px rgba(163,47,63,.34); }
+    .gift-message {
+      max-width: 640px;
+      margin-top: 24px;
+      color: #604f48;
+      font-size: clamp(20px, 3vw, 30px);
+      line-height: 1.8;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: .55s ease;
+      pointer-events: none;
+    }
+    .gift-message.show { opacity: 1; transform: translateY(0); }
+
+    .timeline-dot { color: var(--christmas-red); }
+    .timeline-wrap::before { background: linear-gradient(180deg, transparent, rgba(23,61,52,.28), rgba(163,47,63,.24), transparent); }
+    .timeline-date { color: #9c3544; }
+    .timeline-note { color: rgba(23,61,52,.08); }
+    .highlight { color: var(--christmas-red); }
+    .love-progress-bar { background: linear-gradient(90deg, var(--christmas-green), var(--christmas-gold), var(--christmas-red)); }
+
+    .snowflake {
+      position: fixed;
+      z-index: 1001;
+      top: -30px;
+      color: rgba(255,255,255,.8);
+      pointer-events: none;
+      user-select: none;
+      animation: snowfall linear forwards;
+      filter: drop-shadow(0 0 5px rgba(255,255,255,.45));
+    }
+    @keyframes snowfall {
+      to { transform: translate3d(var(--drift), calc(100vh + 60px), 0) rotate(420deg); opacity: .12; }
+    }
+
+    .archive-note { margin-top: 24px; color: #9a8981; font-size: 14px; }
+    .archive-note a { color: var(--christmas-red); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(163,47,63,.28); }
+
+    @media (max-width: 720px) {
+      .season-nav { font-size: 12px; padding-left: 14px; }
+      .hero-card { border-radius: 34px; }
+      .christmas-countdown-card::after { opacity: .16; right: 12px; }
+      .christmas-countdown { gap: 8px; }
+      .countdown-unit { min-width: calc(50% - 4px); padding: 15px 18px; }
+      .countdown-unit strong { font-size: 28px; }
+      .gift-card { min-height: 320px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .snowflake, .garland::after { display: none; }
+    }
   </style>
 </head>
 
 <body>
+  <nav class="season-nav" aria-label="季节主题和历史版本">
+    <div class="season-brand">我们的恋爱日常 · 圣诞季</div>
+    <a class="archive-link" href="520.html">打开 520 原版</a>
+  </nav>
   <div class="cursor-glow" id="cursorGlow"></div>
 
   <div class="love-progress-wrap">
@@ -1279,6 +1525,7 @@
   <main class="page-shell">
     <section class="hero">
       <div class="hero-card">
+        <div class="garland" aria-hidden="true"></div>
         <div class="sanrio-sticker sticker-kitty">
           <img src="0-0.png" alt="Hello Kitty" loading="lazy">
         </div>
@@ -1287,13 +1534,14 @@
           <img src="0-1.jpg" alt="My Melody" loading="lazy">
         </div>
 
+        <div class="christmas-kicker reveal">CHRISTMAS SEASON · 2026</div>
         <img class="kitty-icon reveal" src="0-2.png" alt="凯蒂猫" onerror="this.src='https://api.iconify.design/twemoji/cat-face.svg'" />
         <h1 class="reveal" style="transition-delay: 0.2s;">To 瑰色宝宝</h1>
-        <p class="hero-subtitle reveal" style="transition-delay: 0.4s;">520快乐宝宝</p>
+        <p class="hero-subtitle reveal" style="transition-delay: 0.4s;">我们的恋爱日常 · 冬日限定</p>
         <div class="sub-love reveal" style="transition-delay: 0.6s;">
-          今年我们虽然没有一起过520，但我会永远在你身边。我们会永远在一起的宝宝，我爱你。
+          圣诞节只是这一页现在的颜色，而你一直是我每一天的主题。<br>想和宝宝一起把普通的日子，慢慢过成好多好多值得收藏的回忆。
         </div>
-        <div class="hero-scroll reveal" style="transition-delay: 0.8s;"><span>↓</span> 臭臭♡宝宝</div>
+        <div class="hero-scroll reveal" style="transition-delay: 0.8s;"><span>↓</span> 往下翻，继续看我们的故事</div>
       </div>
     </section>
 
@@ -1327,6 +1575,20 @@
         </div>
       </div>
 
+      <div class="bento-card reveal card-interactive christmas-countdown-card" style="transition-delay: 0.2s;">
+        <div class="card-content">
+          <div class="card-tag">CHRISTMAS IS COMING</div>
+          <div class="card-title">离圣诞节还有</div>
+          <div class="card-desc">今年冬天也想和宝宝留下新的回忆。</div>
+          <div class="christmas-countdown" id="christmasCountdown" aria-live="polite">
+            <div class="countdown-unit"><strong id="xmasDays">--</strong><span>天</span></div>
+            <div class="countdown-unit"><strong id="xmasHours">--</strong><span>小时</span></div>
+            <div class="countdown-unit"><strong id="xmasMinutes">--</strong><span>分钟</span></div>
+            <div class="countdown-unit"><strong id="xmasSeconds">--</strong><span>秒</span></div>
+          </div>
+        </div>
+      </div>
+
       <div class="bento-card reveal card-interactive hidden-guise-card" style="transition-delay: 0.35s;">
         <div class="card-content">
           <div style="display:flex; flex-direction:column; gap:8px; max-width:560px;">
@@ -1343,12 +1605,20 @@
           </div>
         </div>
       </div>
+
+      <div class="bento-card reveal card-interactive gift-card" style="transition-delay: 0.4s;">
+        <div class="card-tag">A LITTLE GIFT</div>
+        <div class="card-title">给宝宝准备了一份小礼物</div>
+        <div class="card-desc" style="margin-bottom:24px;">点一下礼物，拆开一句只属于你的冬日悄悄话。</div>
+        <button class="gift-button" type="button" onclick="openChristmasGift()" aria-label="拆开圣诞礼物">🎁</button>
+        <div class="gift-message" id="giftMessage">圣诞快乐，瑰色宝宝。我的愿望很简单：今年、明年，还有以后的每一年，都想继续出现在你的日常里。♡</div>
+      </div>
     </section>
 
     <div class="bento-card reveal card-interactive timeline-card" style="transition-delay: 0.4s;">
       <div class="card-content">
         <div>
-          <div class="card-title">我们的六年</div>
+          <div class="card-title">我们的日常与六年</div>
           <div class="card-desc">有些瞬间可能很普通，但因为是和你一起，所以我会一直记得。</div>
         </div>
 
@@ -1463,13 +1733,13 @@
 
     <section class="letter-sec reveal">
       <div class="letter-head">
-        <h2>Letter For Kunsel</h2>
+        <h2>Winter Letter For Kunsel</h2>
 
       </div>
       <div class="letter-box">
         <div class="card-tag">to瑰色宝宝</div>
         <div class="letter-content">
-          <p>520快乐，瑰色宝宝。</p>
+          <p>圣诞节快到了，瑰色宝宝。</p>
 
           <p>其实我不太会表达我的爱意，我总是会干一些愚蠢的事情惹你生气，总是在你生气的时候不知道怎么哄你，谢谢你能一直包容我的脾气。</p>
 
@@ -1477,7 +1747,9 @@
 
           <p>宝宝，我想和你有未来，我心里最重要的人就是你，我永远爱你宝宝。</p>
 
-          <p>这个网页，它还不够完美，有bug，有单调的地方，但我对你的爱是这个网页无法装下的。</p>
+          <p>我把这个网页继续留给我们的日常。春天、夏天、秋天、冬天，它可以换很多种颜色，但里面记录的一直都是我们。</p>
+
+          <p>今年圣诞，我想许一个很贪心的愿望：以后每一个节日和无数个普通日子，都还可以继续和你一起过。</p>
 
           <p><span class="highlight">希望你打开它的时候，会觉得：原来我真的有被好好爱着。</span></p>
 
@@ -1488,15 +1760,60 @@
 
     <section class="reveal" style="padding: 10px 0 120px; text-align:center;">
       <div style="font-family:'Playfair Display','Noto Sans SC',serif; font-size:clamp(28px,4vw,44px); font-style:italic; color:#c997ad; letter-spacing:-0.8px; opacity:0.92;">
-        Still loving you...
+        Every season, still loving you...
       </div>
       <div style="margin-top:14px; color:#b9a2ad; font-size:13px; letter-spacing:1px;">
          ♡
       </div>
+      <div class="archive-note">想看看最初的礼物？<a href="520.html">回到 520 原版</a></div>
     </section>
   </main>
 
   <script>
+    function updateChristmasCountdown() {
+      const now = new Date();
+      let christmas = new Date(now.getFullYear(), 11, 25, 0, 0, 0);
+      if (now > christmas) christmas = new Date(now.getFullYear() + 1, 11, 25, 0, 0, 0);
+      const distance = Math.max(0, christmas - now);
+      const values = {
+        xmasDays: Math.floor(distance / 86400000),
+        xmasHours: Math.floor((distance % 86400000) / 3600000),
+        xmasMinutes: Math.floor((distance % 3600000) / 60000),
+        xmasSeconds: Math.floor((distance % 60000) / 1000)
+      };
+      Object.entries(values).forEach(([id, value]) => {
+        const element = document.getElementById(id);
+        if (element) element.textContent = String(value).padStart(2, '0');
+      });
+    }
+
+    function openChristmasGift() {
+      const message = document.getElementById('giftMessage');
+      if (!message) return;
+      message.classList.add('show');
+      for (let i = 0; i < 18; i++) {
+        setTimeout(() => createSnowflake(true), i * 45);
+      }
+    }
+
+    function createSnowflake(burst = false) {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const snow = document.createElement('span');
+      snow.className = 'snowflake';
+      snow.textContent = Math.random() > .55 ? '❄' : '·';
+      snow.style.left = (burst ? 35 + Math.random() * 30 : Math.random() * 100) + 'vw';
+      snow.style.fontSize = (8 + Math.random() * 14) + 'px';
+      snow.style.opacity = .25 + Math.random() * .6;
+      snow.style.setProperty('--drift', (-70 + Math.random() * 140) + 'px');
+      snow.style.animationDuration = (burst ? 2.4 + Math.random() * 2 : 6 + Math.random() * 6) + 's';
+      document.body.appendChild(snow);
+      snow.addEventListener('animationend', () => snow.remove());
+    }
+
+    updateChristmasCountdown();
+    setInterval(updateChristmasCountdown, 1000);
+    setInterval(createSnowflake, 480);
+
     document.querySelectorAll('.card-interactive').forEach(card => {
       card.addEventListener('mousemove', e => {
         const rect = card.getBoundingClientRect();
