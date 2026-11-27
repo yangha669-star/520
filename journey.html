@@ -42,7 +42,19 @@ a{color:inherit}.top{background:#21111b;color:white;border-bottom:5px solid var(
 const KEY='ourJourneyPlaces_v1';let places=[],markers={},activeFilter='all',selectedId=null,map;
 const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const color={visited:'#ed2c8b',dream:'#3984d6',special:'#a04bb6'},label={visited:'♥ 已去过',dream:'★ 未来想去',special:'✧ 特别纪念'};
-function load(){try{places=JSON.parse(localStorage.getItem(KEY)||'[]');if(!Array.isArray(places))places=[]}catch{places=[]}}
+const starterPlaces=[
+{id:'visited-lhasa',name:'拉萨',city:'拉萨',country:'中国',type:'visited',date:'',lat:29.6520,lng:91.1721,story:'一起去过的地方 ♡',photo:''},
+{id:'visited-chengdu',name:'成都',city:'成都',country:'中国',type:'visited',date:'',lat:30.5728,lng:104.0668,story:'一起去过的地方 ♡',photo:''},
+{id:'visited-shanghai',name:'上海',city:'上海',country:'中国',type:'visited',date:'',lat:31.2304,lng:121.4737,story:'一起去过的地方 ♡',photo:''},
+{id:'visited-shandong',name:'山东',city:'山东（地图标记取济南）',country:'中国',type:'visited',date:'',lat:36.6512,lng:117.1201,story:'一起去过的地方 ♡',photo:''},
+{id:'visited-tokyo',name:'东京',city:'东京',country:'日本',type:'visited',date:'',lat:35.6762,lng:139.6503,story:'一起去过的地方 ♡',photo:''},
+{id:'visited-kyoto',name:'京都',city:'京都',country:'日本',type:'visited',date:'',lat:35.0116,lng:135.7681,story:'一起去过的地方 ♡',photo:''},
+{id:'visited-osaka',name:'大阪',city:'大阪',country:'日本',type:'visited',date:'',lat:34.6937,lng:135.5023,story:'一起去过的地方 ♡',photo:''},
+{id:'visited-singapore',name:'新加坡',city:'新加坡',country:'新加坡',type:'visited',date:'',lat:1.3521,lng:103.8198,story:'一起去过的地方 ♡',photo:''},
+{id:'visited-hongkong',name:'香港',city:'香港',country:'中国',type:'visited',date:'',lat:22.3193,lng:114.1694,story:'一起去过的地方 ♡',photo:''},
+{id:'visited-okinawa',name:'冲绳',city:'冲绳（那霸）',country:'日本',type:'visited',date:'',lat:26.2124,lng:127.6809,story:'一起去过的地方 ♡',photo:''}
+];
+function load(){try{places=JSON.parse(localStorage.getItem(KEY)||'[]');if(!Array.isArray(places))places=[]}catch{places=[]}const known=new Set(places.map(p=>p.id));const added=starterPlaces.filter(p=>!known.has(p.id));if(added.length){places=[...places,...added];save()}}
 function save(){localStorage.setItem(KEY,JSON.stringify(places))}
 function markerIcon(type){let symbol=type==='visited'?'♥':type==='dream'?'★':'✧';return L.divIcon({className:'',html:'<div class="pin" style="color:'+color[type]+'">'+symbol+'</div>',iconSize:[30,34],iconAnchor:[15,28]})}
 function visible(p){return activeFilter==='all'||p.type===activeFilter}
