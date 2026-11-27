@@ -1264,7 +1264,7 @@
     
 /* Shibuya Love — gyaru Christmas edition */
 :root{--bg-base:#24121e;--text-main:#301322;--text-sec:#85405e;--accent-pink:#d90069;--accent-soft:#ffcee5;--accent-warm:#f29abe}
-body{background-color:#27141e;background-image:radial-gradient(ellipse at 25% 25%,#27141e 0 15%,#ad765c 17% 24%,transparent 27%),radial-gradient(ellipse at 72% 76%,#25151e 0 13%,#d3948c 15% 23%,transparent 26%),linear-gradient(135deg,#9d426b,#e7a1b4);background-size:52px 43px,62px 48px,100% 100%;background-attachment:fixed;color:#301322}
+body{background-color:#24121e;color:#301322}
 body::before,body::after{display:none}
 .page-shell{width:min(1160px,calc(100% - 36px))}
 .gy-nav{position:relative;z-index:5;background:#21111b;color:#fff0f8;border-bottom:3px double #ff6bad;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px max(18px,calc((100vw - 1160px)/2));font-weight:800;font-size:12px;letter-spacing:1.4px;flex-wrap:wrap}
@@ -1293,6 +1293,25 @@ body::before,body::after{display:none}
 .gy-footer{color:#ffe3f1;text-align:center;background:#25121e;padding:20px;margin-top:15px;border-top:2px solid #fa68ac}
 @media(max-width:720px){.gy-nav{padding:12px}.gy-nav a{margin-left:6px;font-size:10px}.hero-card{min-height:360px;padding:38px 15px}.gy-photo{opacity:.55;left:1%;top:13%}.hero h1{font-size:clamp(55px,13vw,90px)}.timer-card,.gy-count,.hidden-guise-card,.gy-gift{grid-column:1/-1;min-height:0;padding:24px 18px}.gy-bow{right:3%;bottom:6%}.hero .kitty-icon{width:48px}.bento-container{gap:15px}.fixed-music-player{left:10px;right:10px;bottom:10px;width:auto}.letter-sec{padding-bottom:85px}}
 @media(prefers-reduced-motion:reduce){.gy-snow{display:none}.reveal{opacity:1!important;transform:none!important}}
+
+
+/* Zebra gyaru edition */
+:root{--gy-zebra:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 180'%3E%3Crect width='240' height='180' fill='%23fff6fa'/%3E%3Cg fill='%231b121a'%3E%3Cpath d='M0 0H33Q60 22 110 28T240 12V0H213Q157 22 102 13T60 0Z'/%3E%3Cpath d='M0 24Q38 39 80 42T155 55Q190 65 240 39V22Q191 48 147 39T71 30Q28 27 0 12Z'/%3E%3Cpath d='M0 56Q32 42 62 56T132 82Q174 94 240 63V50Q184 76 143 68T66 45Q30 32 0 43Z'/%3E%3Cpath d='M0 75Q40 87 86 89T160 109Q204 125 240 94V78Q207 106 160 96T90 76Q43 77 0 62Z'/%3E%3Cpath d='M0 112Q39 90 73 109T142 133Q183 140 240 118V105Q184 126 147 119T77 96Q41 80 0 98Z'/%3E%3Cpath d='M0 135Q44 149 88 145T164 158Q207 175 240 147V132Q209 155 166 144T87 133Q43 137 0 121Z'/%3E%3Cpath d='M0 166Q45 150 83 166T151 180H194Q130 171 95 156T0 153Z'/%3E%3Cpath d='M214 180L240 159V180Z'/%3E%3C/g%3E%3C/svg%3E")}
+body{background-color:#20131d;background-image:linear-gradient(90deg,#20131d18,#20131d18),var(--gy-zebra);background-size:auto,300px 225px;background-attachment:fixed}
+.gy-nav{border-bottom:7px solid transparent;border-image:var(--gy-zebra) 12 repeat}
+.hero-card{border:12px solid transparent;border-image:var(--gy-zebra) 18 repeat;box-shadow:0 0 0 3px #f52b91,0 12px 30px #0009}
+.gy-kicker{background:#fff5fa;color:#b90060;border:2px solid #ff5ba9;box-shadow:4px 4px #171018}
+.gy-photo{background-image:var(--gy-zebra);background-size:110px 83px;border:3px solid #ff70b6;padding:9px 9px 24px}
+.gy-photo::after{content:"♡";position:absolute;bottom:0;right:9px;color:#ff168b;font-size:22px;text-shadow:1px 1px white}
+.gy-count{border-top:12px solid transparent;border-image:var(--gy-zebra) 14 repeat}
+.gy-gift{position:relative;overflow:hidden}
+.gy-gift::after{content:"";position:absolute;width:110px;height:22px;top:13px;right:-32px;transform:rotate(40deg);background:var(--gy-zebra) center/100px;border-block:2px solid #f52c91;pointer-events:none}
+.gy-gift button{background:var(--gy-zebra) center/140px!important;color:#fff!important;text-shadow:0 1px 3px #000,1px 1px #000;border:3px solid #ff419b!important;box-shadow:0 3px 0 #a60050, inset 0 0 0 40px #bd00546b}
+.timeline-photo-front{background-image:var(--gy-zebra);background-size:105px 79px;border:3px solid #ec75b0!important}
+.timeline-photo-front .photo-flip-hint{background:#ffb8d9;color:#3b1228}
+.fixed-music-player{border:5px solid transparent;border-image:var(--gy-zebra) 12 repeat}
+.gy-footer{border-top:7px solid transparent;border-image:var(--gy-zebra) 12 repeat}
+@media(max-width:720px){body{background-size:auto,180px 135px}.hero-card{border-width:7px}.gy-photo{padding:5px 5px 18px}}
 
 </style>
 </head>
